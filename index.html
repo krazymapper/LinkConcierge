@@ -196,17 +196,243 @@
     <script type="module" src="/scripts/app.js"></script>
     <script type="module" src="/scripts/pwa.js"></script>
     <script>
-        // Charger les données de test
-        document.getElementById('test-data-btn').addEventListener('click', async () => {
-            try {
-                const response = await fetch('/sample-data.js');
-                const code = await response.text();
-                eval(code);
-                LinkConciergeUtils.addSampleData();
-            } catch (error) {
-                console.error('Erreur lors du chargement des données de test:', error);
-                alert('Erreur lors du chargement des données de test. Vérifiez la console pour plus de détails.');
+        // Données de test intégrées
+        const sampleLinks = [
+            {
+                id: "1",
+                url: "https://github.com",
+                title: "GitHub - Where the world builds software",
+                category: "Développement",
+                icon: "🐙",
+                createdAt: "2024-01-15T10:30:00.000Z",
+                domain: "github.com"
+            },
+            {
+                id: "2",
+                url: "https://stackoverflow.com",
+                title: "Stack Overflow - Where Developers Learn, Share, & Build Careers",
+                category: "Développement",
+                icon: "💻",
+                createdAt: "2024-01-14T15:45:00.000Z",
+                domain: "stackoverflow.com"
+            },
+            {
+                id: "3",
+                url: "https://developer.mozilla.org",
+                title: "MDN Web Docs - Learn web development",
+                category: "Documentation",
+                icon: "📚",
+                createdAt: "2024-01-13T09:20:00.000Z",
+                domain: "developer.mozilla.org"
+            },
+            {
+                id: "4",
+                url: "https://css-tricks.com",
+                title: "CSS-Tricks - Tips, Tricks, and Techniques on using Cascading Style Sheets",
+                category: "CSS",
+                icon: "🎨",
+                createdAt: "2024-01-12T14:15:00.000Z",
+                domain: "css-tricks.com"
+            },
+            {
+                id: "5",
+                url: "https://www.smashingmagazine.com",
+                title: "Smashing Magazine — For Web Designers And Developers",
+                category: "Design",
+                icon: "💡",
+                createdAt: "2024-01-11T11:30:00.000Z",
+                domain: "smashingmagazine.com"
+            },
+            {
+                id: "6",
+                url: "https://www.youtube.com",
+                title: "YouTube - Broadcast Yourself",
+                category: "Vidéo",
+                icon: "📺",
+                createdAt: "2024-01-10T16:20:00.000Z",
+                domain: "youtube.com"
+            },
+            {
+                id: "7",
+                url: "https://medium.com",
+                title: "Medium – Where good ideas find you",
+                category: "Lecture",
+                icon: "📖",
+                createdAt: "2024-01-09T13:45:00.000Z",
+                domain: "medium.com"
+            },
+            {
+                id: "8",
+                url: "https://www.notion.so",
+                title: "Notion – The all-in-one workspace for your notes, docs, wikis, and projects",
+                category: "Productivité",
+                icon: "📝",
+                createdAt: "2024-01-08T08:30:00.000Z",
+                domain: "notion.so"
+            },
+            // Sites de données topographiques
+            {
+                id: "9",
+                url: "https://earthdata.nasa.gov",
+                title: "NASA Earthdata (SRTM) - Shuttle Radar Topography Mission",
+                category: "Topographie",
+                icon: "🌍",
+                createdAt: "2024-01-07T10:00:00.000Z",
+                domain: "earthdata.nasa.gov"
+            },
+            {
+                id: "10",
+                url: "https://lnkd.in/dhfrySmj",
+                title: "USGS Earth Explorer - SRTM, ASTER GDEM, ALOS, and more",
+                category: "Topographie",
+                icon: "🗺️",
+                createdAt: "2024-01-07T10:01:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "11",
+                url: "https://lnkd.in/d9F2Kqi9",
+                title: "Copernicus EU-DEM - European Digital Elevation Model",
+                category: "Topographie",
+                icon: "🏔️",
+                createdAt: "2024-01-07T10:02:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "12",
+                url: "https://lnkd.in/dG8NeFby",
+                title: "CGIAR-CSI SRTM - Corrected SRTM DEM",
+                category: "Topographie",
+                icon: "📊",
+                createdAt: "2024-01-07T10:03:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "13",
+                url: "https://lnkd.in/dG4JwY5f",
+                title: "JAXA's Global ALOS 3D World (AW3D30) - ALOS World 3D DEM",
+                category: "Topographie",
+                icon: "🌐",
+                createdAt: "2024-01-07T10:04:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "14",
+                url: "https://opentopography.org",
+                title: "OpenTopography - High-resolution DEM datasets from LiDAR",
+                category: "Topographie",
+                icon: "🔍",
+                createdAt: "2024-01-07T10:05:00.000Z",
+                domain: "opentopography.org"
+            },
+            {
+                id: "15",
+                url: "https://lnkd.in/d74VHkwr",
+                title: "EarthEnv DEM90 - Global DEM from multiple datasets",
+                category: "Topographie",
+                icon: "🌎",
+                createdAt: "2024-01-07T10:06:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "16",
+                url: "https://lnkd.in/dvaWwaMP",
+                title: "Viewfinder Panoramas - High-quality DEM for remote regions",
+                category: "Topographie",
+                icon: "🏞️",
+                createdAt: "2024-01-07T10:07:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "17",
+                url: "https://www.gebco.net/",
+                title: "GEBCO - General Bathymetric Chart of the Oceans",
+                category: "Topographie",
+                icon: "🌊",
+                createdAt: "2024-01-07T10:08:00.000Z",
+                domain: "gebco.net"
+            },
+            {
+                id: "18",
+                url: "https://lnkd.in/dzXKyvSK",
+                title: "ArcticDEM - High-resolution DEM for the Arctic region",
+                category: "Topographie",
+                icon: "❄️",
+                createdAt: "2024-01-07T10:09:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "19",
+                url: "https://nationalmap.gov",
+                title: "National Map (USGS) - National Elevation Dataset (NED), LiDAR",
+                category: "Topographie",
+                icon: "🗽",
+                createdAt: "2024-01-07T10:10:00.000Z",
+                domain: "nationalmap.gov"
+            },
+            {
+                id: "20",
+                url: "https://lnkd.in/d65rfi2K",
+                title: "TanDEM-X 90m DEM (DLR) - Global DEM from radar data",
+                category: "Topographie",
+                icon: "🛰️",
+                createdAt: "2024-01-07T10:11:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "21",
+                url: "https://lnkd.in/daHcHuE6",
+                title: "ASTER Global DEM (GDEM) - ASTER Global DEM",
+                category: "Topographie",
+                icon: "📡",
+                createdAt: "2024-01-07T10:12:00.000Z",
+                domain: "lnkd.in"
+            },
+            {
+                id: "22",
+                url: "https://lnkd.in/d-UEXsaB",
+                title: "NASA SEDAC - Global DEM and Land Surface Elevation",
+                category: "Topographie",
+                icon: "🛸",
+                createdAt: "2024-01-07T10:13:00.000Z",
+                domain: "lnkd.in"
             }
+        ];
+
+        // Fonction pour ajouter les données de test
+        function addSampleData() {
+            console.log('📝 Ajout des données d\'exemple...');
+            
+            // Récupérer les liens existants
+            const existingLinks = JSON.parse(localStorage.getItem('linkconcierge-links') || '[]');
+            
+            // Ajouter les nouveaux liens (éviter les doublons)
+            const newLinks = sampleLinks.filter(sampleLink => 
+                !existingLinks.some(existingLink => existingLink.url === sampleLink.url)
+            );
+            
+            if (newLinks.length === 0) {
+                console.log('ℹ️  Tous les liens d\'exemple sont déjà présents !');
+                alert('Tous les liens d\'exemple sont déjà présents !');
+                return;
+            }
+            
+            // Ajouter les nouveaux liens
+            const updatedLinks = [...newLinks, ...existingLinks];
+            localStorage.setItem('linkconcierge-links', JSON.stringify(updatedLinks));
+            
+            console.log(`✅ ${newLinks.length} liens d'exemple ajoutés !`);
+            alert(`${newLinks.length} liens d'exemple ajoutés ! L'application va se recharger.`);
+            
+            // Recharger la page automatiquement
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        }
+
+        // Charger les données de test
+        document.getElementById('test-data-btn').addEventListener('click', () => {
+            addSampleData();
         });
     </script>
 </body>

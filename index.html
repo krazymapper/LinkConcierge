@@ -74,6 +74,11 @@
                     </div>
                     
                     <div class="flex items-center space-x-4">
+                        <!-- Test Button (temporaire) -->
+                        <button id="test-data-btn" class="px-3 py-1 text-xs font-medium text-white bg-green-600 hover:bg-green-700 rounded-md transition-colors">
+                            🧪 Test Data
+                        </button>
+                        
                         <!-- Theme Toggle -->
                         <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
                             <svg id="sun-icon" class="w-5 h-5 text-gray-600 dark:text-gray-400 hidden" fill="currentColor" viewBox="0 0 20 20">
@@ -190,5 +195,19 @@
     <!-- Scripts -->
     <script type="module" src="/scripts/app.js"></script>
     <script type="module" src="/scripts/pwa.js"></script>
+    <script>
+        // Charger les données de test
+        document.getElementById('test-data-btn').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/sample-data.js');
+                const code = await response.text();
+                eval(code);
+                LinkConciergeUtils.addSampleData();
+            } catch (error) {
+                console.error('Erreur lors du chargement des données de test:', error);
+                alert('Erreur lors du chargement des données de test. Vérifiez la console pour plus de détails.');
+            }
+        });
+    </script>
 </body>
 </html> 

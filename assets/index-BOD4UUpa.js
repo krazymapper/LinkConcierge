@@ -33,9 +33,10 @@
                 <h3 class="text-lg font-medium text-emerald-500 mb-2">Aucun lien sauvegardé</h3>
                 <p class="text-slate-400">Commencez par ajouter votre premier lien ci-dessus !</p>
             `,e.classList.remove("hidden"))}}document.addEventListener("DOMContentLoaded",()=>{new m;const a=document.querySelector("header");a&&a.classList.add("sticky","top-0","z-40")});if(window.location.pathname.endsWith("blog.html")){let a=function(){return JSON.parse(localStorage.getItem("blogArticles")||"[]")},e=function(n){localStorage.setItem("blogArticles",JSON.stringify(n))},t=function(){const n=a().sort((s,o)=>new Date(o.date)-new Date(s.date)),r=document.getElementById("articles-list");if(r){if(n.length===0){r.innerHTML='<p class="text-gray-500 dark:text-gray-400">Aucun article publié pour le moment.</p>';return}r.innerHTML=n.map((s,o)=>`
-      <article class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm relative group">
-        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">${i(s.title)}</h3>
+      <article class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 shadow-sm relative group text-slate-800 dark:text-slate-300">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-emerald-500 mb-2">${i(s.title)}</h3>
         <div class="prose prose-sm dark:prose-invert max-w-none mb-2">${s.html}</div>
+
         <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
           <span>${new Date(s.date).toLocaleString()}</span>
           <div class="space-x-2 opacity-80 group-hover:opacity-100">

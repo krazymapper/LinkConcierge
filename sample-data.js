@@ -73,7 +73,207 @@ const sampleLinks = [
         icon: "📝",
         createdAt: "2024-01-08T08:30:00.000Z",
         domain: "notion.so"
-    }
+    },
+    // Tutoriels Google Earth Engine - Analyse des données climatiques
+    {
+        id: "gee-1",
+        url: "https://lnkd.in/ddsKiA7x",
+        title: "Drought Mapping - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:00:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-2",
+        url: "https://lnkd.in/dif6sxKw",
+        title: "Drought Monitoring - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:01:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-3",
+        url: "https://lnkd.in/dEPn8qdb",
+        title: "Drought Temporal Classification - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:02:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-4",
+        url: "https://lnkd.in/dAy65aMb",
+        title: "Precipitation Mapping - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:03:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-5",
+        url: "https://lnkd.in/d74tJTbX",
+        title: "Precipitation Downscaling - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:04:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-6",
+        url: "https://lnkd.in/d33YicZ5",
+        title: "Precipitation Anomaly - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:05:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-7",
+        url: "https://lnkd.in/dzywG4id",
+        title: "Preparing Precipitation Data - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:06:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-8",
+        url: "https://lnkd.in/dRcu2P4T",
+        title: "Number of Dry and Wet Days - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:07:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-9",
+        url: "https://lnkd.in/dDc-AwYP",
+        title: "Climate Data Classification - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:08:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-10",
+        url: "https://lnkd.in/dvb_YYJF",
+        title: "Temperature Downscaling - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:09:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-11",
+        url: "https://lnkd.in/gaDnATcs",
+        title: "Temperature Trend Analysis - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:10:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "gee-12",
+        url: "https://lnkd.in/dhZU69wZ",
+        title: "Number of Frost Days - Google Earth Engine Tutorial",
+        category: "Google Earth Engine",
+        icon: "🌍",
+        createdAt: "2024-01-20T10:11:00.000Z",
+        domain: "lnkd.in"
+    },
+    // Sources gratuites de shapefiles
+    {
+        id: "shp-1",
+        url: "https://lnkd.in/dt9HdxVU",
+        title: "Geofabrik (OSM Extracts) – OpenStreetMap shapefile par continent et pays",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:00:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "shp-2",
+        url: "https://lnkd.in/d9UXnmiE",
+        title: "DIVA-GIS – Limites administratives, routes, rivières, élévation, occupation du sol",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:01:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "shp-3",
+        url: "https://gadm.org",
+        title: "GADM – Limites administratives mondiales détaillées",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:02:00.000Z",
+        domain: "gadm.org"
+    },
+    {
+        id: "shp-4",
+        url: "https://data.humdata.org",
+        title: "Humanitarian Data Exchange (HDX) – Données SIG humanitaires et développement",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:03:00.000Z",
+        domain: "data.humdata.org"
+    },
+    {
+        id: "shp-5",
+        url: "https://overpass-turbo.eu",
+        title: "OpenStreetMap (Overpass Turbo) – Extraction de données prêtes pour shapefile",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:04:00.000Z",
+        domain: "overpass-turbo.eu"
+    },
+    {
+        id: "shp-6",
+        url: "https://mapcruzin.com",
+        title: "MapCruzin – Jeux de données shapefile environnement, démographie, infrastructures",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:05:00.000Z",
+        domain: "mapcruzin.com"
+    },
+    {
+        id: "shp-7",
+        url: "https://lnkd.in/dbbVC55x",
+        title: "FAO/UNESCO – Données pédologiques mondiales à l'échelle 1:5 000 000",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:06:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "shp-8",
+        url: "https://lnkd.in/d7pdxhsA",
+        title: "USGS – Données géologiques mondiales",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:07:00.000Z",
+        domain: "lnkd.in"
+    },
+    {
+        id: "shp-9",
+        url: "https://rsis.ramsar.org/",
+        title: "Ramsar – Zones humides d'importance internationale (sites Ramsar)",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:08:00.000Z",
+        domain: "rsis.ramsar.org"
+    },
+    {
+        id: "shp-10",
+        url: "https://lnkd.in/dGCAPU_h",
+        title: "World Bank Data Catalog – Données shapefile sur le développement, urbanisation, environnement",
+        category: "Sources de shapefiles",
+        icon: "🗺️",
+        createdAt: "2024-01-21T10:09:00.000Z",
+        domain: "lnkd.in"
+    },
 ];
 
 // Fonction pour ajouter les données d'exemple

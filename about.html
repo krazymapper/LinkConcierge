@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - LinkConcierge</title>
+  <meta name="description" content="À propos de LinkConcierge, l'application pour organiser et partager vos liens.">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#3b82f6">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+      <link rel="stylesheet" href="./styles/output.css">
+</head>
+<body class="h-full bg-slate-800 text-slate-300 transition-colors duration-200">
+  <div class="min-h-full flex flex-col">
+    <header class="bg-emerald-600 dark:bg-emerald-800 shadow-sm border-b border-emerald-700 dark:border-emerald-900">
+      <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center relative">
+        <a href="index.html" class="text-2xl font-bold text-white dark:text-emerald-100 hover:text-emerald-200 transition-colors">🔗 LinkConcierge</a>
+        
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex space-x-4">
+          <a href="about.html" class="text-white dark:text-emerald-100 font-semibold border-b-2 border-white">À propos</a>
+          <a href="contact.html" class="text-emerald-100 dark:text-emerald-200 hover:text-white transition-colors">Contact</a>
+          <a href="coffee.html" class="text-yellow-200 dark:text-yellow-300 hover:text-yellow-100 transition-colors">☕ Buy Me a Coffee</a>
+          <a href="blog.html" class="text-emerald-100 dark:text-emerald-200 hover:text-white transition-colors">Blog</a>
+        </nav>
+        
+        <!-- Burger button -->
+        <button id="burger-btn" class="md:hidden flex items-center px-2 py-1 text-white dark:text-emerald-100 focus:outline-none" aria-label="Ouvrir le menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        
+        <!-- Mobile nav -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-emerald-600 dark:bg-emerald-800 shadow-lg border-b border-emerald-700 dark:border-emerald-900 z-50 flex-col items-center py-4 space-y-2 hidden md:hidden">
+          <a href="index.html" class="block text-emerald-100 dark:text-emerald-200 hover:text-white transition-colors">Accueil</a>
+          <a href="about.html" class="block text-white dark:text-emerald-100 font-semibold border-b-2 border-white">À propos</a>
+          <a href="contact.html" class="block text-emerald-100 dark:text-emerald-200 hover:text-white transition-colors">Contact</a>
+          <a href="coffee.html" class="block text-yellow-200 dark:text-yellow-300 hover:text-yellow-100 transition-colors">☕ Buy Me a Coffee</a>
+          <a href="blog.html" class="block text-emerald-100 dark:text-emerald-200 hover:text-white transition-colors">Blog</a>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 max-w-4xl mx-auto px-4 py-12">
+      <h1 class="text-3xl font-bold text-emerald-500 mb-4">À propos de LinkConcierge</h1>
+      <blockquote class="border-l-4 border-emerald-500 pl-4 italic text-slate-200 mb-6">
+        <span class="font-semibold text-emerald-500">LinkConcierge</span> est une application web open source conçue pour vous aider à <strong class="text-emerald-500">sauvegarder, organiser et partager vos liens favoris</strong> de façon simple, moderne et efficace.
+      </blockquote>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Notre mission</h2>
+      <p class="mb-6 text-slate-200">
+        <span class="font-semibold">Faciliter la gestion de la connaissance et la veille web pour tous.</span><br>
+        Que vous soyez étudiant, chercheur, professionnel, passionné de veille ou simple curieux, LinkConcierge vous permet de centraliser vos ressources, de les retrouver en un clic, et de les partager facilement.
+      </p>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Pourquoi LinkConcierge&nbsp;?</h2>
+      <ul class="list-disc pl-6 text-slate-200 mb-6 space-y-1">
+        <li><strong>Surcharge d'informations</strong> : Ne perdez plus vos liens importants, centralisez tout au même endroit.</li>
+        <li><strong>Simplicité</strong> : Pas de compte, pas de cloud obligatoire, tout fonctionne en local (et hors-ligne&nbsp;!).</li>
+        <li><strong>Respect de la vie privée</strong> : Vos données restent sur votre appareil, sauf si vous choisissez de les exporter ou de les partager.</li>
+        <li><strong>Open source</strong> : Le code est ouvert, transparent, et améliorable par la communauté.</li>
+      </ul>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Fonctionnalités clés</h2>
+      <ul class="list-disc pl-6 text-slate-200 mb-6 space-y-1">
+        <li>Ajout rapide de liens (titre, URL, catégorie, icône)</li>
+        <li>Organisation par catégories personnalisables</li>
+        <li>Recherche et filtrage instantanés</li>
+        <li>Tri par date, titre ou catégorie</li>
+        <li>Export/Import JSON</li>
+        <li>Thème sombre/clair</li>
+        <li>PWA&nbsp;: installation sur mobile/desktop, fonctionnement hors-ligne</li>
+        <li>Navigation moderne et responsive</li>
+        <li>Pages annexes&nbsp;: Contact, Blog, Buy Me a Coffee</li>
+      </ul>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Pour qui&nbsp;?</h2>
+      <ul class="list-disc pl-6 text-slate-200 mb-6 space-y-1">
+        <li><strong>Étudiants</strong> : centralisez vos ressources de cours, tutos, articles scientifiques.</li>
+        <li><strong>Professionnels</strong> : organisez votre veille, vos outils, vos benchmarks.</li>
+        <li><strong>Formateurs</strong> : partagez des collections de liens avec vos apprenants.</li>
+        <li><strong>Curieux</strong> : gardez une trace de tout ce qui vous inspire sur le web.</li>
+      </ul>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Développement & philosophie</h2>
+      <p class="mb-6 text-slate-200">
+        LinkConcierge est développé par <span class="font-semibold">krazymapper</span> avec une volonté de&nbsp;:
+      </p>
+      <ul class="list-disc pl-6 text-slate-200 mb-6 space-y-1">
+        <li>Simplicité d'usage</li>
+        <li>Accessibilité</li>
+        <li>Performance</li>
+        <li>Respect de la vie privée</li>
+        <li>Design inspiré de Raindrop.io et LinkAce</li>
+      </ul>
+      <p class="mb-6 text-slate-200">
+        Le projet est sous licence <a href="https://opensource.org/licenses/MIT" target="_blank" class="underline text-emerald-600 dark:text-emerald-400">MIT</a> et ouvert à toutes les contributions.
+      </p>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Contribuer</h2>
+      <p class="mb-6 text-slate-200">
+        Envie d'améliorer LinkConcierge&nbsp;? <br>
+        <ul class="list-disc pl-6 text-slate-200 mb-6 space-y-1">
+          <li>Forkez le projet sur <a href="https://github.com/" class="underline text-emerald-600 dark:text-emerald-400">GitHub</a></li>
+          <li>Proposez vos idées, ouvrez des issues, soumettez des pull requests</li>
+          <li>Partagez l'outil autour de vous&nbsp;!</li>
+        </ul>
+      </p>
+      <h2 class="text-xl font-semibold text-slate-100 mt-8 mb-2">Remerciements</h2>
+      <p class="mb-6 text-slate-200">
+        Merci à tous les utilisateurs, testeurs, contributeurs et à la communauté open source qui inspire ce projet.
+      </p>
+      <div class="mt-10 text-center text-lg text-emerald-500 font-semibold">
+        LinkConcierge – Organisez vos liens, simplifiez votre navigation, reprenez le contrôle sur votre veille web.<br>
+        <span class="text-slate-200 font-normal">Développé avec ❤️ par krazymapper.</span>
+      </div>
+      <a href="index.html" class="inline-block mt-8 px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-md transition-colors">← Retour à l'accueil</a>
+    </main>
+    <footer class="bg-slate-900 border-t border-slate-700 py-6 mt-12">
+      <div class="max-w-4xl mx-auto px-4 text-center text-sm text-slate-400">
+        © 2024 krazymapper — <a href="https://opensource.org/licenses/MIT" target="_blank" class="underline hover:text-emerald-500">MIT License</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./sample-data.js"></script>
+</body>
+</html> 

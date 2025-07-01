@@ -344,4 +344,6 @@ window.LinkConciergeUtils = {
 console.log('🔗 LinkConcierge - Utilitaires de test chargés !');
 console.log('📝 Utilisez LinkConciergeUtils.addSampleData() pour ajouter des données d\'exemple');
 console.log('🗑️  Utilisez LinkConciergeUtils.clearAllData() pour supprimer toutes les données');
-console.log('📊 Utilisez LinkConciergeUtils.showStats() pour voir les statistiques'); 
+console.log('📊 Utilisez LinkConciergeUtils.showStats() pour voir les statistiques');
+
+export { sampleLinks }; 

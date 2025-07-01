@@ -1,7 +1,13 @@
 // LinkConcierge - Main Application Logic
 
+import { sampleLinks } from '../sample-data.js';
+
 class LinkConcierge {
     constructor() {
+        // Initialisation automatique des données d'exemple si aucune donnée n'est présente
+        if (!localStorage.getItem('linkconcierge-links')) {
+            localStorage.setItem('linkconcierge-links', JSON.stringify(sampleLinks));
+        }
         this.links = this.loadLinks();
         this.currentFilter = '';
         this.currentSort = 'date';
